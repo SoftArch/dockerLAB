@@ -1,7 +1,7 @@
 # dockerLAB
 
-docker LAB is a dind (docker in docker) sample.
-It includes HTML5 VNC interface to access LXDE desktop environment.
+dockerLAB is a dind (docker in docker) sample.  
+It includes HTML5 VNC interface to access LXDE desktop environment.  
 Visual Studio Code added for writing Dockerfile, Docker Compose and some code samples.
 
 Include;
