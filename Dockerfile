@@ -23,4 +23,9 @@ RUN wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | apt-key add 
 RUN add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 RUN apt update && apt install code
 
+# Add Wallpaper :)
+COPY ./Docs/docker_wp3.jpg /usr/local/share/doro-lxde-wallpapers/bg1.jpg
+COPY ./Docs/code.desktop /root/Desktop/code.desktop
+COPY ./Docs/lxterminal.desktop /root/Desktop/lxterminal.desktop
+
 ENV OPENBOX_ARGS='--startup "service docker start"'

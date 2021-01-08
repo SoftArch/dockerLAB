@@ -1,0 +1,37 @@
+version: "3"
+
+services:
+  trainer1:
+    image: softarch/docker-lab
+    ports:
+      - "6080:80"
+    volumes:
+      - "trainer1-docker:/var/lib/docker"
+      - "trainer1-desktop:/root/Desktop/source"
+    privileged: true
+
+  student1:
+    image: softarch/docker-lab
+    ports:
+      - "6081:80"
+    volumes:
+      - "student1-docker:/var/lib/docker"
+      - "student1-desktop:/root/Desktop/source"
+    privileged: true
+
+  student2:
+    image: softarch/docker-lab
+    ports:
+      - "6082:80"
+    volumes:
+      - "student2-docker:/var/lib/docker"
+      - "student2-desktop:/root/Desktop/source"
+    privileged: true
+
+volumes:
+  trainer1-docker:
+  trainer1-desktop:
+  student1-docker:
+  student1-desktop:
+  student2-docker:
+  student2-desktop:
